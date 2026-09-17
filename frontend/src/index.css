@@ -1,0 +1,355 @@
+/* ==========================================================================
+   TalentPath — estilos base
+   Los colores corresponden a las variables del archivo de Figma.
+   Si cambias un valor aqui, cambia en toda la aplicacion.
+   ========================================================================== */
+
+:root {
+  /* marca */
+  --navy: #16264a;
+  --navy-medio: #24406e;
+  --navy-profundo: #0f1f3d;
+  --ice: #cadcfc;
+
+  /* acento */
+  --mint: #00a896;
+  --mint-oscuro: #0f6e60;
+  --mint-fondo: #e9f7f4;
+
+  /* estados */
+  --ambar: #d9922e;
+  --ambar-fondo: #fdf3e0;
+  --coral: #c4453f;
+  --coral-fondo: #fbedec;
+
+  /* superficies */
+  --fondo: #f5f7fb;
+  --tarjeta: #ffffff;
+  --borde: #e3e9f4;
+  --borde-input: #d3dcec;
+
+  /* texto */
+  --texto-titulo: #16264a;
+  --texto-cuerpo: #2e3a54;
+  --texto-suave: #6b7690;
+  --texto-etiqueta: #8895b0;
+  --texto-menu: #aebbd6;
+  --texto-menu-suave: #8395b8;
+
+  --radio: 12px;
+  --radio-chico: 8px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto-cuerpo);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; border: none; }
+
+/* -------------------------------------------------------------------------
+   Estructura general
+   ------------------------------------------------------------------------- */
+
+.app { display: flex; min-height: 100vh; }
+
+.contenido {
+  flex: 1;
+  padding: 30px 32px;
+  min-width: 0;
+}
+
+/* -------------------------------------------------------------------------
+   Menu lateral
+   ------------------------------------------------------------------------- */
+
+.menu {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--navy);
+  padding: 30px 0 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-marca {
+  padding: 0 26px 30px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #fff;
+}
+.menu-marca span { color: var(--mint); }
+
+.menu-item {
+  display: block;
+  padding: 13px 26px;
+  font-size: 15px;
+  color: var(--texto-menu);
+  border-left: 3px solid transparent;
+}
+.menu-item:hover { color: #fff; }
+.menu-item.activo {
+  background: var(--navy-medio);
+  color: #fff;
+  font-weight: 600;
+  border-left-color: var(--mint);
+}
+
+.menu-usuario {
+  padding: 0 26px;
+  font-size: 13px;
+  color: var(--texto-menu-suave);
+  line-height: 19px;
+}
+
+/* -------------------------------------------------------------------------
+   Encabezado de pagina
+   ------------------------------------------------------------------------- */
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  gap: 16px;
+}
+.titulo { font-size: 27px; font-weight: 700; color: var(--texto-titulo); }
+.subtitulo { font-size: 14px; color: var(--texto-suave); margin-top: 4px; }
+
+/* -------------------------------------------------------------------------
+   Tarjetas
+   ------------------------------------------------------------------------- */
+
+.tarjeta {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 20px 22px;
+}
+.tarjeta-oscura {
+  background: var(--navy);
+  border: none;
+  color: #fff;
+}
+.tarjeta-mint {
+  background: var(--mint-fondo);
+  border-color: var(--mint);
+}
+
+.etiqueta {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--texto-etiqueta);
+  margin-bottom: 8px;
+}
+.tarjeta-oscura .etiqueta { color: var(--mint); }
+.tarjeta-mint .etiqueta { color: var(--mint-oscuro); }
+
+/* -------------------------------------------------------------------------
+   Rejillas
+   ------------------------------------------------------------------------- */
+
+.rejilla-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.rejilla-2-1 { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; align-items: start; }
+.columna { display: flex; flex-direction: column; gap: 16px; }
+
+@media (max-width: 1100px) {
+  .rejilla-4 { grid-template-columns: repeat(2, 1fr); }
+  .rejilla-2-1 { grid-template-columns: 1fr; }
+}
+
+/* -------------------------------------------------------------------------
+   Indicadores
+   ------------------------------------------------------------------------- */
+
+.indicador-valor { font-size: 36px; font-weight: 700; color: var(--texto-titulo); }
+.indicador-nota { font-size: 12px; color: var(--texto-suave); margin-top: 4px; }
+
+/* -------------------------------------------------------------------------
+   Botones
+   ------------------------------------------------------------------------- */
+
+.boton {
+  display: inline-block;
+  background: var(--mint);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px 20px;
+  border-radius: var(--radio-chico);
+  text-align: center;
+}
+.boton:hover { background: var(--mint-oscuro); }
+
+.boton-secundario {
+  display: inline-block;
+  background: var(--tarjeta);
+  color: var(--texto-titulo);
+  border: 1px solid var(--borde-input);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 18px;
+  border-radius: var(--radio-chico);
+  text-align: center;
+}
+.boton-secundario:hover { border-color: var(--navy); }
+
+.boton-chico { padding: 8px 14px; font-size: 12.5px; }
+.boton-ancho { display: block; width: 100%; }
+
+/* -------------------------------------------------------------------------
+   Formularios
+   ------------------------------------------------------------------------- */
+
+.campo {
+  width: 100%;
+  border: 1px solid var(--borde-input);
+  border-radius: var(--radio-chico);
+  padding: 14px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--texto-cuerpo);
+  background: #fff;
+  margin-bottom: 16px;
+}
+.campo:focus { outline: 2px solid var(--mint); outline-offset: -2px; }
+.campo::placeholder { color: var(--texto-etiqueta); }
+
+/* -------------------------------------------------------------------------
+   Tablas
+   ------------------------------------------------------------------------- */
+
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--texto-etiqueta);
+  padding: 0 8px 10px 0;
+}
+td { padding: 12px 8px 12px 0; border-top: 1px solid var(--borde); color: var(--texto-cuerpo); }
+td.fuerte { font-weight: 600; color: var(--texto-titulo); }
+
+/* -------------------------------------------------------------------------
+   Insignias de estado
+   ------------------------------------------------------------------------- */
+
+.insignia {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.insignia-verde { background: var(--mint-fondo); color: var(--mint-oscuro); }
+.insignia-ambar { background: var(--ambar-fondo); color: #93650f; }
+.insignia-coral { background: var(--coral-fondo); color: #8c302b; }
+.insignia-azul  { background: var(--ice); color: var(--navy); }
+
+/* -------------------------------------------------------------------------
+   Filtros
+   ------------------------------------------------------------------------- */
+
+.filtros { display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; }
+.filtro {
+  background: #fff;
+  border: 1px solid var(--borde-input);
+  color: var(--texto-titulo);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 12.5px;
+}
+.filtro.activo { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+/* -------------------------------------------------------------------------
+   Barras de progreso
+   ------------------------------------------------------------------------- */
+
+.barra { height: 7px; background: var(--borde); border-radius: 5px; overflow: hidden; }
+.barra-relleno { height: 7px; border-radius: 5px; background: var(--mint); }
+
+/* -------------------------------------------------------------------------
+   Login
+   ------------------------------------------------------------------------- */
+
+.login { display: flex; min-height: 100vh; }
+.login-marca {
+  width: 40%;
+  background: var(--navy);
+  color: #fff;
+  padding: 60px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login-marca h1 { font-size: 30px; margin-bottom: 18px; }
+.login-marca h1 span { color: var(--mint); }
+.login-marca p { font-size: 18px; line-height: 30px; color: var(--ice); }
+.login-marca ul { margin-top: 34px; list-style: none; color: var(--texto-menu-suave); line-height: 28px; font-size: 14px; }
+
+.login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 90px;
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .login { flex-direction: column; }
+  .login-marca { width: 100%; padding: 40px 28px; }
+  .login-form { padding: 40px 28px; }
+}
+
+/* -------------------------------------------------------------------------
+   Lista de ofertas
+   ------------------------------------------------------------------------- */
+
+.oferta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--borde);
+}
+.oferta-datos { flex: 1; min-width: 0; }
+.oferta-puesto { font-size: 14.5px; font-weight: 600; color: var(--texto-titulo); margin-bottom: 3px; }
+.oferta-meta { font-size: 12.5px; color: var(--texto-suave); }
+
+/* -------------------------------------------------------------------------
+   Requisitos
+   ------------------------------------------------------------------------- */
+
+.requisito {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--borde);
+}
+.requisito-nombre { width: 150px; font-weight: 600; color: var(--texto-titulo); font-size: 14px; }
+.requisito-barra { flex: 1; }
+.requisito-estado { width: 150px; text-align: right; }
+
+/* -------------------------------------------------------------------------
+   Utilidades
+   ------------------------------------------------------------------------- */
+
+.entre { display: flex; justify-content: space-between; align-items: center; }
+.fila { display: flex; gap: 10px; align-items: center; }
+.mt { margin-top: 14px; }
+.centrado { text-align: center; }
+.texto-chico { font-size: 12.5px; color: var(--texto-suave); }
+.enlace-mint { color: var(--mint); font-size: 13px; font-weight: 500; }
