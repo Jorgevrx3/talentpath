@@ -105,7 +105,7 @@ Consultas individuales:
 
 ## Integrantes
 
-- [Apellidos, Nombres]
+- cerazo huari dreisser
 - [Apellidos, Nombres]
 - [Apellidos, Nombres]
 
