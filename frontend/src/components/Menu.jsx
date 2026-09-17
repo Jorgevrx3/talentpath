@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { usuario } from '../data/mock.js'
 
-// Menu lateral. Equivale al componente "Menu lateral" del archivo de Figma.
 const secciones = [
   { texto: 'Inicio',        ruta: '/inicio' },
   { texto: 'Mi currículum', ruta: '/curriculum' },
@@ -11,7 +10,7 @@ const secciones = [
   { texto: 'Asistente',     ruta: '/asistente' },
   { texto: 'Suscripción',   ruta: '/suscripcion' }
 ]
-
+//HOLA
 export default function Menu() {
   return (
     <nav className="menu">
