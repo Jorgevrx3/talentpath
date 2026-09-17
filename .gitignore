@@ -1,0 +1,50 @@
+# Credenciales y variables de entorno
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Dependencias
+node_modules/
+.pnp
+.pnp.js
+
+# Compilados y builds
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+
+# Base de datos local
+*.sqlite
+*.sqlite3
+*.db
+dumps/
+
+# Archivos temporales de Office
+~$*.docx
+~$*.pptx
+~$*.xlsx
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Cachés
+.cache/
+coverage/
