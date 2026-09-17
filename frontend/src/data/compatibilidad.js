@@ -9,7 +9,7 @@
 // resultado viene del motor Prolog real. Esta version sirve mientras tanto
 // y da exactamente los mismos numeros.
 // ---------------------------------------------------------------------------
-
+//Commit Pritel
 // Un requisito obligatorio pesa el doble que uno deseable.
 const PESO = { obligatorio: 2, deseable: 1 }
 
