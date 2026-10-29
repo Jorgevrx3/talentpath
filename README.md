@@ -105,6 +105,7 @@ Consultas individuales:
 
 ## Integrantes
 
+- bonifacio martinez angel sachencko
 - cerazo huari dreisser
 - quispe gonzales keylor
 - [Apellidos, Nombres]
