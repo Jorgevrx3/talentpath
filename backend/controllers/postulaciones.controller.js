@@ -44,7 +44,7 @@ async function crearPostulacion(req, res) {
 
     if (!id_usuario || !id_oferta || !cv || !fecha) {
       return res.status(400).json({
-        mensaje: 'Faltan datos obligatorios'
+        mensaje: 'Faltan datos obligatorioss'
       })
     }
 
