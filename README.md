@@ -106,7 +106,7 @@ Consultas individuales:
 ## Integrantes
 
 - cerazo huari dreisser
-- [Apellidos, Nombres]
+- quispe gonzales keylor
 - [Apellidos, Nombres]
 
 **Docente:** [Apellidos, Nombres]
