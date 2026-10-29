@@ -1,4 +1,5 @@
-// Encabezado de pagina: titulo, subtitulo y acciones a la derecha.
+//Encabezado de pagina: titulo, subtitulo y acciones a la derecha.
+//Modificado encabezado por fila
 export default function Encabezado({ titulo, subtitulo, children }) {
   return (
     <div className="encabezado">
